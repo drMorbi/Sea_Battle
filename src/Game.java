@@ -18,6 +18,7 @@ public class Game {
         player1.getBfe(bf.printField());
 
         Ship ship = new Ship();
-        player1.placementShips(player1, ship);
+        ship.placementShips(player1, bf, ship);
+        player1.getBfe(bf.printField());
     }
 }

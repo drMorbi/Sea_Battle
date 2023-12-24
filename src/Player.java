@@ -20,16 +20,6 @@ public class Player {
         this.bfeAttack = bfeAttack;
     }
 
-    public void placementShips(Player player, Ship ship){
-
-        Scanner scan = new Scanner(System.in);
-        String s = scan.nextLine();
-        String[] n = s.split(",");
-        ship.setPointX(Integer.parseInt(n[0]));
-        ship.setPointY(Integer.parseInt(n[1]));
-        ship.setDecks(Integer.parseInt(n[2]));
-        System.out.println(ship.getPointX() + " " + ship.getPointY() + " " + ship.getDecks());
-    }
 
     public void attack(Player player){
 

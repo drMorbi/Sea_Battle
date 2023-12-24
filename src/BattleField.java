@@ -2,9 +2,31 @@ import java.util.Arrays;
 
 public class BattleField {
     private String[][] battleField = new String[11][11];
-    private String space = "⬜";
+    private final String space = "⬜";
+    private final String ship = "🟪";
+    private final String strike = "🟥";
+    private final String miss = "🟦";
 
+    public void setBattleField(String[][] battleField) {
+        this.battleField = battleField;
+    }
 
+    public void setBattle(Ship ship) {
+        int a = ship.getPointY();
+        int b = ship.getPointX();
+        int c = ship.getDecks();
+
+        switch (ship.getOrientation()){
+            case 0:
+                for (int i = b; i < b + c; i++)
+                    battleField[a][i] = this.ship;
+                break;
+            case 1:
+                for (int i = a; i < a + c; i++)
+                    battleField[i][b] = this.ship;
+                break;
+        }
+    }
 
     public String[][] getBattleField() {
         return battleField;
