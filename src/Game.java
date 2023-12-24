@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Game {
     public static void main(String[] args) {
 
@@ -7,6 +5,7 @@ public class Game {
         BattleField bfEnemy = new BattleField();
         Player player1 = new Player();
         Player player2 = new Player();
+        Ship ship = new Ship();
 
 //        System.out.println("ИГРА НАЧИТАЕТСЯ!");
       //  bf.fillField();
@@ -14,11 +13,10 @@ public class Game {
       //  bf.printField();
 //        bfEnemy.printField();
         player1.setBfe(bf.fillField());
-        player1.getBfeAttack(bf.fillField());
+        player1.setBfeAttack(bf.fillField());
         player1.getBfe(bf.printField());
 
-        Ship ship = new Ship();
-        ship.placementShips(player1, bf, ship);
+        bf.setBattle(ship);
         player1.getBfe(bf.printField());
     }
 }

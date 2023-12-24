@@ -39,7 +39,7 @@ public class Ship {
     }
 
 
-    public void placementShips(Player player, BattleField battleField, Ship ship){
+    public boolean checkCoordEnter(Player player, BattleField battleField, Ship ship){
 
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
@@ -49,7 +49,7 @@ public class Ship {
         ship.setDecks(Integer.parseInt(n[2]));
         ship.setOrientation(Integer.parseInt(n[3]));
 
-        battleField.setBattle(ship);
-        System.out.println(ship.getPointX() + " " + ship.getPointY() + " " + ship.getDecks());
+        return true;
     }
+
 }

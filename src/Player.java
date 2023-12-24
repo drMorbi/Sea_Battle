@@ -7,7 +7,6 @@ public class Player {
     public BattleField getBfe(BattleField bfe) {
         return bfe;
     }
-
     public void setBfe(BattleField bfe) {
         this.bfe = bfe;
     }
@@ -15,7 +14,6 @@ public class Player {
     public BattleField getBfeAttack(BattleField bfeAttack) {
         return bfeAttack;
     }
-
     public void setBfeAttack(BattleField bfeAttack) {
         this.bfeAttack = bfeAttack;
     }

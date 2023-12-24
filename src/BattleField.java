@@ -7,24 +7,24 @@ public class BattleField {
     private final String strike = "🟥";
     private final String miss = "🟦";
 
-    public void setBattleField(String[][] battleField) {
-        this.battleField = battleField;
-    }
-
     public void setBattle(Ship ship) {
-        int a = ship.getPointY();
-        int b = ship.getPointX();
-        int c = ship.getDecks();
+        Player player = new Player();
+        BattleField battleField = new BattleField();
+        if (ship.checkCoordEnter(player, battleField, ship)) {
+            int a = ship.getPointY();
+            int b = ship.getPointX();
+            int c = ship.getDecks();
 
-        switch (ship.getOrientation()){
-            case 0:
-                for (int i = b; i < b + c; i++)
-                    battleField[a][i] = this.ship;
-                break;
-            case 1:
-                for (int i = a; i < a + c; i++)
-                    battleField[i][b] = this.ship;
-                break;
+            switch (ship.getOrientation()) {
+                case 0:
+                    for (int i = b; i < b + c; i++)
+                        this.battleField[a][i] = this.ship;
+                    break;
+                case 1:
+                    for (int i = a; i < a + c; i++)
+                        this.battleField[i][b] = this.ship;
+                    break;
+            }
         }
     }
 
@@ -65,6 +65,18 @@ public class BattleField {
         return null;
     }
 
+    public String getSpace() {
+        return space;
+    }
+    public String getShip() {
+        return ship;
+    }
+    public String getStrike() {
+        return strike;
+    }
+    public String getMiss() {
+        return miss;
+    }
 
     public BattleField printField() {
         for (String[] strings : battleField) {
