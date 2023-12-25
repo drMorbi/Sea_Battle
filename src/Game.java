@@ -12,11 +12,15 @@ public class Game {
       //  bfEnemy.fillField();
       //  bf.printField();
 //        bfEnemy.printField();
-        player1.setBfe(bf.fillField());
-        player1.setBfeAttack(bf.fillField());
-        player1.getBfe(bf.printField());
+//        player1.setBfe(bf.fillField());
+//        player1.setBfeAttack(bf.fillField());
+//        player1.getBfe(bf.printField());
+//
+//        bf.setBattle(ship);
+//        player1.getBfe(bf.printField());
 
-        bf.setBattle(ship);
-        player1.getBfe(bf.printField());
+        player1.game();
+
     }
+
 }

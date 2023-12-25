@@ -18,6 +18,12 @@ public class Player {
         this.bfeAttack = bfeAttack;
     }
 
+    public  void game(){
+        ValidEnter vl = new ValidEnter();
+        vl.stringToInt();
+        vl.vaEn();
+    }
+
 
     public void attack(Player player){
 

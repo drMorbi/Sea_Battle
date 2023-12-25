@@ -7,6 +7,9 @@ public class BattleField {
     private final String strike = "🟥";
     private final String miss = "🟦";
 
+
+
+
     public void setBattle(Ship ship) {
         Player player = new Player();
         BattleField battleField = new BattleField();
