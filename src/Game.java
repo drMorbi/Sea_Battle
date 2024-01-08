@@ -1,23 +1,23 @@
 public class Game {
     public static void main(String[] args) {
 
-        BattleField bf = new BattleField();
-        BattleField bfEnemy = new BattleField();
+        BattleField bf1 = new BattleField();
+        BattleField bf2 = new BattleField();
         Player player1 = new Player();
         Player player2 = new Player();
         Ship ship = new Ship();
 
 //        System.out.println("ИГРА НАЧИТАЕТСЯ!");
-      //  bf.fillField();
-      //  bfEnemy.fillField();
-      //  bf.printField();
-//        bfEnemy.printField();
-//        player1.setBfe(bf.fillField());
-//        player1.setBfeAttack(bf.fillField());
-//        player1.getBfe(bf.printField());
+        bf1.fillField();
+      //  bf2.fillField();
+      //  bf1.printField();
+//        bf2.printField();
+//        player1.setBfe(bf1.fillField());
+//        player1.setBfeAttack(bf1.fillField());
+//        player1.getBfe(bf1.printField());
 //
-//        bf.setBattle(ship);
-//        player1.getBfe(bf.printField());
+//        bf1.setBattle(ship);
+//        player1.getBfe(bf1.printField());
 
         player1.game();
 
